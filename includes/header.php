@@ -19,8 +19,8 @@ session_start();
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="/inventory-system/dashboard.php">
-            <i class="fas fa-boxes"></i> RomsInvMS
+        <a class="navbar-brand" href="/dashboard.php">
+            <i class="fas fa-boxes"></i> InventoryMS
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -29,20 +29,20 @@ session_start();
             <ul class="navbar-nav ms-auto">
                 <?php if(isset($_SESSION['user_id'])): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/inventory-system/dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a class="nav-link" href="/dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/inventory-system/products/index.php"><i class="fas fa-box"></i> Products</a>
+                        <a class="nav-link" href="/products/index.php"><i class="fas fa-box"></i> Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger" href="/inventory-system/logout.php"><i class="fas fa-sign-out-alt"></i> Logout (<?= htmlspecialchars($_SESSION['username']) ?>)</a>
+                        <a class="nav-link text-danger" href="/logout.php"><i class="fas fa-sign-out-alt"></i> Logout (<?= htmlspecialchars($_SESSION['username']) ?>)</a>
                     </li>
                 <?php else: ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/inventory-system/login.php">Login</a>
+                        <a class="nav-link" href="/login.php">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/inventory-system/register.php">Register</a>
+                        <a class="nav-link" href="/register.php">Register</a>
                     </li>
                 <?php endif; ?>
             </ul>
